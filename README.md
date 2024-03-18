@@ -64,7 +64,7 @@ $ yarn test
 
 ### Acessando a documentação do swagger
 
-OBS: A url vai depender das suas variáves ambiente, como as variáveis acimas estão definidas como PORT=4000 e URL_BASE='http://localhost' a url para o swagger ficará
+OBS: A url vai depender das suas variáveis ambiente, como as variáveis acima estão definidas como PORT=4000 e URL_BASE='http://localhost' a url para o swagger ficará
 
 ```bash
   http://localhost:4000/api/doc
