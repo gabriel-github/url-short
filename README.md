@@ -35,10 +35,10 @@ URL_BASE='http://localhost'
 DATABASE_URL="postgresql://docker:short_url_db@localhost:5432/short_url_db?schema=public"
 ```
 
-
+### Rodando o projeto
 ```bash
 # Clone esse repositório
-$ git clone meu git clone
+$ git clone https://github.com/gabriel-github/url-short.git
 
 #Instalando dependencias
 $ yarn install
@@ -54,7 +54,7 @@ $ yarn start:dev
 
 ```
 
-# Rode os testes unitários
+### Rodando os testes unitários
 
 ```bash
 # Comando para rodar os testes
