@@ -22,6 +22,26 @@ export class PrismaUrlsRepository implements UrlsRepository {
   }
 
   async create(url: Url): Promise<void> {
+    if (url.userId) {
+      const user = await this.prisma.user.findUnique({
+        where: {
+          id: url.userId,
+        },
+      });
+
+      if (!user) {
+        throw new NotFoundException('User not found!');
+      }
+
+      const data = PrismaUrlMapper.toPrisma(url);
+
+      await this.prisma.url.create({
+        data,
+      });
+
+      return;
+    }
+
     const data = PrismaUrlMapper.toPrisma(url);
 
     await this.prisma.url.create({
