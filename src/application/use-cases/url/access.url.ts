@@ -22,7 +22,7 @@ export class AccessUrl {
     const url = await this.urlRepository.accessUrl(accessUrl);
 
     if (!url) {
-      return left(new UseCaseError('Url not found', 404));
+      return left(new UseCaseError('URL not found!', 404));
     }
 
     return right({

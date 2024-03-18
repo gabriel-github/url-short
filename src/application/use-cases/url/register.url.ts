@@ -1,7 +1,6 @@
-import { Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable } from '@nestjs/common';
 import ShortUniqueId from 'short-unique-id';
 import { Url } from 'src/application/entities/url';
-import { UseCaseError } from 'src/application/errors/use.cases.error';
 import { UrlsRepository } from 'src/application/repositories/urls.repository';
 
 interface RegisterUrlRequest {
@@ -19,9 +18,8 @@ export class RegisterUrl {
 
   async execute({ originalUrl, userId }: RegisterUrlRequest) {
     if (!this.isValidUrl(originalUrl)) {
-      throw new UseCaseError(
+      throw new BadRequestException(
         'O link deve começar com "https://" ou "http://".',
-        400,
       );
     }
 

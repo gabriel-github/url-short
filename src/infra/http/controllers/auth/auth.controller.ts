@@ -1,5 +1,10 @@
-import { Body, Controller, HttpCode, Post } from '@nestjs/common';
-import { UseCaseError } from 'src/application/errors/use.cases.error';
+import {
+  BadRequestException,
+  Body,
+  Controller,
+  HttpCode,
+  Post,
+} from '@nestjs/common';
 import { LoginUser } from 'src/application/use-cases/authenticate/login.user';
 import { AuthenticateUserBody } from './dtos/authenticate.user.body';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
@@ -24,7 +29,7 @@ export class AuthController {
 
     if (response.isLeft()) {
       const error = response.value;
-      throw new UseCaseError(error.message, error.statusCode);
+      throw new BadRequestException(error.message);
     }
 
     const { accessToken } = response.value;
