@@ -13,15 +13,15 @@ O projeto consiste em desenvolver uma API RESTful utilizando Node.js (na última
 
 ## ⚙️ Features
 
-[x] Cadastro e autenticação de usuários
-[x] Encurtamento de URLs
-[x] Endpoint único para encurtar URLs
-[x] Associação de URLs encurtadas a usuários autenticados
-[x] Listagem de URLs encurtadas por usuário
-[x] Edição do endereço de destino de URLs encurtadas
-[x] Exclusão lógica de URLs encurtadas
-[x] Contabilização de acessos
-[x] Registro de data de atualização para todos os registros
+- [x] Cadastro e autenticação de usuários
+- [x] Encurtamento de URLs
+- [x] Endpoint único para encurtar URLs
+- [x] Associação de URLs encurtadas a usuários autenticados
+- [x] Listagem de URLs encurtadas por usuário
+- [x] Edição do endereço de destino de URLs encurtadas
+- [x] Exclusão lógica de URLs encurtadas
+- [x] Contabilização de acessos
+- [x] Registro de data de atualização para todos os registros
 
 OBS: Para simplificar os testes, estou fornecendo diretamente as variáveis de ambiente utilizadas na criação do projeto. Normalmente, em um projeto completo, eu disponibilizaria apenas o arquivo env.example para quem fizesse a clonagem do projeto.
 
