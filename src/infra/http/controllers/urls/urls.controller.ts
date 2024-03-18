@@ -110,7 +110,7 @@ export class UrlsController {
   })
   @HttpCode(200)
   @Get('/access/:hash')
-  @Redirect('https://www.youtube.com', 301)
+  @Redirect('', 301)
   @HttpCode(200)
   async access(@Param('hash') hash: string) {
     const result = await this.accessUrl.execute({
